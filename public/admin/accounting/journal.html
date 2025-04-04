@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal Entries - Accounting</title>
+    <!-- Verified Resources -->
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <h1 class="text-2xl font-bold mb-6">Journal Entries</h1>
+        
+        <!-- Journal Entry Form -->
+        <div class="card">
+            <h2 class="card-header">New Journal Entry</h2>
+            <form id="journalForm" class="p-4">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input type="date" id="entryDate" class="form-input" required>
+                    </div>
+                    <div class="form-group col-span-2">
+                        <label>Description</label>
+                        <input type="text" id="description" class="form-input" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Journal Items</h3>
+                    <div id="journalItems" class="space-y-3">
+                        <!-- Items will be added here -->
+                    </div>
+                    <button type="button" id="addItemBtn" class="text-btn">
+                        <i class="fas fa-plus mr-1"></i> Add Item
+                    </button>
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    Save Entry
+                </button>
+            </form>
+        </div>
+
+        <!-- Journal Entries List -->
+        <div class="card mt-4">
+            <div class="card-header">
+                <h2>Recent Entries</h2>
+            </div>
+            <div id="entriesList" class="divide-y">
+                <!-- Entries will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="/admin/accounting/journal.js"></script>
+</body>
+</html>
